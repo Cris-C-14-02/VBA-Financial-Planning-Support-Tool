@@ -1,0 +1,19 @@
+Attribute VB_Name = "OutputForm"
+Attribute VB_Base = "0{3C65DFAA-C778-4647-AC20-1B7E3F193E00}{272F0537-0D7D-4C79-BE0A-EAC3D8E83874}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Option Explicit
+
+Private Sub SubmitBtn_Click()
+    On Error GoTo Failed
+    RefreshFinancialReport
+    AppSheet("Output").Activate
+    Me.Hide
+    Exit Sub
+Failed:
+    MsgBox Err.description, vbExclamation
+End Sub
