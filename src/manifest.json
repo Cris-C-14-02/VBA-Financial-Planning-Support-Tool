@@ -1,0 +1,91 @@
+{
+  "workbook": "Cris Chen - Individual Milestone 4 - Prototype.xlsm",
+  "workbook_sha256": "aa0cc88d5007cd2e731f46461e57803c03a0da71a98bd203e9c38df56ae0be8b",
+  "format": "VBA source text; forms and host classes are not full designer exports",
+  "components": [
+    {
+      "component": "AddItemForm.frm",
+      "stream": "VBA/AddItemForm",
+      "path": "forms/AddItemForm.frm.txt",
+      "sha256": "030f172dd404a12921d45ab8f51014f8697e4b774f033f532b8e84e9115673f2"
+    },
+    {
+      "component": "AddSavingGoalForm.frm",
+      "stream": "VBA/AddSavingGoalForm",
+      "path": "forms/AddSavingGoalForm.frm.txt",
+      "sha256": "9890d87600061e052de3f1f341720c659eac9ebc474bf5f86bb7235fa52d2ea2"
+    },
+    {
+      "component": "OutputForm.frm",
+      "stream": "VBA/OutputForm",
+      "path": "forms/OutputForm.frm.txt",
+      "sha256": "accdbdebae438344164f0761642c6f971ad46dab5f456d0f054d045c8a971838"
+    },
+    {
+      "component": "Sheet1.cls",
+      "stream": "VBA/Sheet1",
+      "path": "host/Sheet1.cls.txt",
+      "sha256": "893bcf21001ed9567945a82e262e42a78c19968b6d6bd018e33db439318bc549"
+    },
+    {
+      "component": "Sheet2.cls",
+      "stream": "VBA/Sheet2",
+      "path": "host/Sheet2.cls.txt",
+      "sha256": "dc376b793fba21d513981980134985420f047eb03b475bbd265b8cfc540b7cd7"
+    },
+    {
+      "component": "Sheet3.cls",
+      "stream": "VBA/Sheet3",
+      "path": "host/Sheet3.cls.txt",
+      "sha256": "349bf88f4ccb9f4e6f4c03018ee929fc6baac657cc625a71cf38d2903a65230f"
+    },
+    {
+      "component": "Sheet4.cls",
+      "stream": "VBA/Sheet4",
+      "path": "host/Sheet4.cls.txt",
+      "sha256": "32be86fa95cfdd0576008e6fcb42fecf671d383a01d30e4c403ff7591c15a0bc"
+    },
+    {
+      "component": "ThisWorkbook.cls",
+      "stream": "VBA/ThisWorkbook",
+      "path": "host/ThisWorkbook.cls.txt",
+      "sha256": "8a5667e084aed31e60335399794671ac247108d5e5a3192726f5973252ee6cc0"
+    },
+    {
+      "component": "FinanceCharts.bas",
+      "stream": "VBA/FinanceCharts",
+      "path": "modules/FinanceCharts.bas",
+      "sha256": "086651574dba55da444785bd21713f4b997cb35d96cf8ba0df5fbff07398c334"
+    },
+    {
+      "component": "FinanceData.bas",
+      "stream": "VBA/FinanceData",
+      "path": "modules/FinanceData.bas",
+      "sha256": "b0f1f40f0908b2e4b52e8ebd474fcf8f139ae0bcd081b98b88ae6140f31d2ed8"
+    },
+    {
+      "component": "FinanceReports.bas",
+      "stream": "VBA/FinanceReports",
+      "path": "modules/FinanceReports.bas",
+      "sha256": "c7f63661fb2ce6cf3c85d99b990a439d12b3e251d42fb26ec6a69fa07ee25a07"
+    },
+    {
+      "component": "Module1.bas",
+      "stream": "VBA/Module1",
+      "path": "modules/Module1.bas",
+      "sha256": "a92969808adb9088ffd205b5c77304b8fb1f860c1e66d048df3381dd6a91fca1"
+    },
+    {
+      "component": "Module2.bas",
+      "stream": "VBA/Module2",
+      "path": "modules/Module2.bas",
+      "sha256": "2520fe9c55483f944501a26a4a6db292a7e7e54c884a6903a14722941af38f82"
+    },
+    {
+      "component": "WorkbookSupport.bas",
+      "stream": "VBA/WorkbookSupport",
+      "path": "modules/WorkbookSupport.bas",
+      "sha256": "a7c2c4523992a972af6155ad48eb3d348e363da05141f64da2f8b95b138c4eb6"
+    }
+  ]
+}

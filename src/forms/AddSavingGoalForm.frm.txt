@@ -1,0 +1,26 @@
+Attribute VB_Name = "AddSavingGoalForm"
+Attribute VB_Base = "0{42DC6596-410B-44CD-BF7F-CC66865E9F14}{9B4093D2-B8F3-4E57-965B-3D23FEF26DF1}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Option Explicit
+
+Private Sub SubmitBtn_Click()
+    Dim begins As Date, ends As Date, opening As Currency, target As Currency
+    On Error GoTo Failed
+    If Not TryDateParts(txtBeginningYear.value, txtBeginningMonth.value, txtBeginningDay.value, begins) Then MsgBox "Enter a valid start date.", vbExclamation: Exit Sub
+    If Not TryDateParts(txtExpectedYear.value, txtExpectedMonth.value, txtExpectedDay.value, ends) Then MsgBox "Enter a valid end date.", vbExclamation: Exit Sub
+    If ends < begins Then MsgBox "End date must be on or after start date.", vbExclamation: Exit Sub
+    If Not TryMoney(txtCurrentSaving.value, opening, True) Then MsgBox "Enter a nonnegative opening balance.", vbExclamation: Exit Sub
+    If Not TryMoney(txtSavingGoal.value, target) Then MsgBox "Enter a positive savings target.", vbExclamation: Exit Sub
+    SaveGoal begins, ends, opening, target
+    ClearFinancialReport
+    MsgBox "Goal saved. The latest goal is used for the report.", vbInformation
+    Me.Hide
+    Exit Sub
+Failed:
+    MsgBox Err.description, vbExclamation
+End Sub

@@ -1,0 +1,33 @@
+Attribute VB_Name = "AddItemForm"
+Attribute VB_Base = "0{15708827-E7E5-4A4C-A4E8-D0DFD435B8DE}{50158564-C731-4C30-94CE-960E9732E285}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Option Explicit
+
+Private Sub UserForm_Initialize()
+    Dim category As Variant
+    cboxCategory.Clear
+    For Each category In Array("Shopping", "Bills", "Income", "Entertainment", "Other")
+        cboxCategory.AddItem category
+    Next category
+End Sub
+
+Private Sub SubmitBtn_Click()
+    Dim enteredOn As Date, amount As Currency
+    On Error GoTo Failed
+    If Len(Trim$(txtItem.value)) = 0 Then MsgBox "Enter an item.", vbExclamation: Exit Sub
+    If Not TryMoney(txtValue.value, amount) Then MsgBox "Enter a positive numeric amount.", vbExclamation: Exit Sub
+    If Not TryDateParts(txtYear.value, txtMonth.value, txtDay.value, enteredOn) Then MsgBox "Enter a valid calendar date.", vbExclamation: Exit Sub
+    If Not IsFinanceCategory(cboxCategory.value) Then MsgBox "Select a listed category.", vbExclamation: Exit Sub
+    SaveTransaction enteredOn, txtItem.value, amount, cboxCategory.value, txtDescription.value
+    ClearFinancialReport
+    MsgBox "Transaction saved. Generate the report to refresh the dashboard.", vbInformation
+    Me.Hide
+    Exit Sub
+Failed:
+    MsgBox Err.description, vbExclamation
+End Sub
